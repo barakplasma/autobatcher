@@ -217,7 +217,7 @@ async with AsyncOpenAI(
 ) as client:
     results = await asyncio.gather(*[
         client.chat.completions.create(
-            model="Qwen/Qwen3.5-35B-A3B-FP8",
+            model="Qwen/Qwen3.6-35B-A3B-FP8",
             messages=[{"role": "user", "content": prompt}],
         )
         for prompt in prompts
@@ -244,9 +244,9 @@ const client = new AsyncOpenAI({
 });
 
 const [a, b, c] = await Promise.all([
-  client.chat.completions.create({ model: "Qwen/Qwen3.5-35B-A3B-FP8", messages: [{ role: "user", content: "What is 1+1?" }] }),
-  client.chat.completions.create({ model: "Qwen/Qwen3.5-35B-A3B-FP8", messages: [{ role: "user", content: "What is 2+2?" }] }),
-  client.chat.completions.create({ model: "Qwen/Qwen3.5-35B-A3B-FP8", messages: [{ role: "user", content: "What is 3+3?" }] }),
+  client.chat.completions.create({ model: "Qwen/Qwen3.6-35B-A3B-FP8", messages: [{ role: "user", content: "What is 1+1?" }] }),
+  client.chat.completions.create({ model: "Qwen/Qwen3.6-35B-A3B-FP8", messages: [{ role: "user", content: "What is 2+2?" }] }),
+  client.chat.completions.create({ model: "Qwen/Qwen3.6-35B-A3B-FP8", messages: [{ role: "user", content: "What is 3+3?" }] }),
 ]);
 
 await client.close();

@@ -29,7 +29,7 @@ const client = new BatchOpenAI({
 });
 
 const response = await client.chat.completions.create({
-  model: "Qwen/Qwen3.5-35B-A3B-FP8",
+  model: "Qwen/Qwen3.6-35B-A3B-FP8",
   messages: [{ role: "user", content: "What is 2+2?" }],
 });
 console.log(response.choices[0].message.content);
@@ -51,7 +51,7 @@ console.log(response.data[0].embedding.slice(0, 5));
 
 ```typescript
 const response = await client.responses.create({
-  model: "Qwen/Qwen3.5-35B-A3B-FP8",
+  model: "Qwen/Qwen3.6-35B-A3B-FP8",
   input: "Explain quantum computing in one sentence.",
 });
 console.log(response.output_text);
@@ -68,7 +68,7 @@ const prompts = ["What is 1+1?", "What is 2+2?", "What is 3+3?"];
 const results = await Promise.all(
   prompts.map((prompt) =>
     client.chat.completions.create({
-      model: "Qwen/Qwen3.5-35B-A3B-FP8",
+      model: "Qwen/Qwen3.6-35B-A3B-FP8",
       messages: [{ role: "user", content: prompt }],
     })
   )

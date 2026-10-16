@@ -193,7 +193,7 @@ Example event:
     "benchmark_id": "bench-2026-04-14",
     "github_run_id": "24393857047"
   },
-  "models": ["Qwen/Qwen3.5-397B-A17B-FP8"],
+  "models": ["Qwen/Qwen3.8-27B-FP8"],
   "request_count": 872,
   "source": "autobatcher",
   "ts": 1776163751.821
