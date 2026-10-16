@@ -57,7 +57,7 @@ jobs:
 
       - name: Install minimum supported OpenAI SDK
         if: matrix.openai-version != 'locked'
-        run: npm install --no-save --package-lock=false "openai@${{ matrix.openai-version }}"
+        run: npm install --no-save "openai@${{ matrix.openai-version }}"  # --package-lock=false crashes npm 10 (edgesOut)
 
       - name: Type check
         run: npm run typecheck
